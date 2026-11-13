@@ -1,6 +1,3 @@
-// todo(main): Return iced::Result from main and call iced::application(App::new, App::update, App::view).run().
-// todo(main): Check with cargo run that an empty window opens (every next todo is checked the same way).
-
 // todo(screen/state): Add a pub struct holding the text and an explicit "work in progress" flag (enum Idle/Working/Done or a separate field).
 // todo(screen/state): Make the fields pub, because App::update changes them directly.
 // todo(screen/state): Never infer the work state by comparing the text with "Working...".
@@ -24,9 +21,13 @@
 // todo(app/update): Clicked returns Task::perform with the future and a mapper to Message::Finished.
 // todo(app/update): All other branches return Task::none(); the signature changes from () to Task<Message>.
 
+use crate::app::App;
+
 pub mod app;
 pub mod screen;
 
-fn main() {
-    println!("Hello, world!");
+fn main() -> iced::Result {
+    iced::application(App::new, App::update, App::view)
+        .title("Iced Playground")
+        .run()
 }
