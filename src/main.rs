@@ -1,6 +1,3 @@
-// todo(screen/message): Add a pub enum Message with variants Clicked, Finished(String) and Reset.
-// todo(screen/message): Derive Clone and Debug (required by Iced).
-// todo(screen/message): Only Finished carries a payload (the result text).
 // todo(app): Replace the temporary message type with screen::Message in update and view; there is no App-level Message or wrapper.
 
 // todo(screen/view): Add a pub view that builds a column with the text and two buttons (start, reset).

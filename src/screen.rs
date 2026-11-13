@@ -1,7 +1,14 @@
+#[derive(Clone, Debug)]
+pub enum Message {
+    Clicked,
+    Finished(String),
+    Reset,
+}
+
 pub enum ProgressStates {
     Idle,
     Working,
-    Done,
+    Finished,
 }
 
 pub struct Screen {
