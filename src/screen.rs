@@ -1,5 +1,6 @@
 use iced::Element;
 use iced::widget::{button, column, text};
+use std::time::Duration;
 
 #[derive(Clone, Debug)]
 pub enum Message {
@@ -35,6 +36,10 @@ impl Screen {
         };
 
         column![text(&self.current_text), buttons,].into()
+    }
+
+    pub async fn _wait() {
+        tokio::time::sleep(Duration::from_secs(3)).await;
     }
 }
 
