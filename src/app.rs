@@ -1,13 +1,5 @@
-use crate::screen;
-use crate::screen::Screen;
+use crate::screen::{Message, ProgressStates, Screen};
 use iced::Element;
-
-// todo(app/update): Reset restores the initial state.
-// todo(app/update): Clicked sets the text to "Working..." and raises the work flag (initially without a Task).
-// todo(app/update): Finished sets the result text and clears the work flag.
-// todo(app/update): Optional - guard Reset while work is in progress (the view already blocks it).
-
-pub enum Message {}
 
 pub struct App {
     screen: Screen,
@@ -20,9 +12,26 @@ impl App {
         }
     }
 
-    pub fn update(&mut self, _message: screen::Message) {}
+    pub fn update(&mut self, message: Message) {
+        match message {
+            Message::Clicked => {
+                self.screen.current_text = String::from("Working...");
+                self.screen.progress_phase = ProgressStates::Working;
+            }
+            Message::Finished => {
+                self.screen.current_text = String::from("Finished!");
+                self.screen.progress_phase = ProgressStates::Finished;
+            }
+            Message::Reset => {
+                if matches!(self.screen.progress_phase, ProgressStates::Finished) {
+                    self.screen.current_text = String::from("Nothing happened yet.");
+                    self.screen.progress_phase = ProgressStates::Idle;
+                }
+            }
+        }
+    }
 
-    pub fn view(&self) -> Element<'_, screen::Message> {
+    pub fn view(&self) -> Element<'_, Message> {
         self.screen.view()
     }
 }

@@ -30,7 +30,7 @@ impl Screen {
     pub fn view(&self) -> Element<'_, Message> {
         let buttons = match &self.progress_phase {
             ProgressStates::Idle => button("Start").on_press_maybe(Some(Message::Clicked)),
-            ProgressStates::Working => button("Working...").on_press_maybe(None),
+            ProgressStates::Working => button("Unavailable").on_press_maybe(None),
             ProgressStates::Finished => button("Reset").on_press_maybe(Some(Message::Reset)),
         };
 
