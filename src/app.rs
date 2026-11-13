@@ -1,6 +1,6 @@
+use crate::screen;
 use crate::screen::Screen;
 use iced::Element;
-use crate::screen;
 
 pub enum Message {}
 
