@@ -12,7 +12,7 @@ impl App {
     pub fn update(&mut self, _message: Message) {}
 
     pub fn view(&self) -> Element<'_, Message> {
-        iced::widget::text("iced-playground").into()
+        iced::widget::text("placeholder").into()
     }
 }
 
