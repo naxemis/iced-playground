@@ -1,4 +1,3 @@
-// todo(app): New returns App; update and view are placeholders using a temporary message type (for example the unit type).
 // todo(main): Return iced::Result from main and call iced::application(App::new, App::update, App::view).run().
 // todo(main): Check with cargo run that an empty window opens (every next todo is checked the same way).
 
