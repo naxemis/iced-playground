@@ -1,5 +1,6 @@
-use iced::Element;
-use iced::widget::{button, column, text};
+use iced::alignment::Horizontal;
+use iced::widget::{button, column, container, text};
+use iced::{Element, Fill};
 use std::time::Duration;
 
 #[derive(Clone, Debug)]
@@ -35,7 +36,11 @@ impl Screen {
             ProgressStates::Finished => button("Reset").on_press_maybe(Some(Message::Reset)),
         };
 
-        column![text(&self.current_text), buttons,].into()
+        let column = column![text(&self.current_text), buttons]
+            .spacing(5)
+            .align_x(Horizontal::Center);
+
+        container(column).center(Fill).into()
     }
 
     pub async fn wait() {
