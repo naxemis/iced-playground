@@ -1,5 +1,3 @@
-// todo(screen/view): Add a pub view that builds a column with the text and two buttons (start, reset).
-// todo(screen/view): Give a button a Message only when no work is in progress; without a Message it is disabled.
 // todo(app/view): Return the screen view as Element<screen::Message> without mapping.
 
 // todo(app/update): Reset restores the initial state.
