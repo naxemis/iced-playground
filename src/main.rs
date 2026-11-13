@@ -1,5 +1,3 @@
-// todo(app/new): Store the screen state in App; new builds it with the text "Nothing happened yet" and no work in progress.
-
 // todo(screen/message): Add a pub enum Message with variants Clicked, Finished(String) and Reset.
 // todo(screen/message): Derive Clone and Debug (required by Iced).
 // todo(screen/message): Only Finished carries a payload (the result text).

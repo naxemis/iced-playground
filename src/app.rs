@@ -1,12 +1,17 @@
+use crate::screen::Screen;
 use iced::Element;
 
 pub enum Message {}
 
-pub struct App {}
+pub struct App {
+    _screen: Screen,
+}
 
 impl App {
     pub fn new() -> Self {
-        Self {}
+        Self {
+            _screen: Screen::new(),
+        }
     }
 
     pub fn update(&mut self, _message: Message) {}
