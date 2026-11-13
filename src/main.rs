@@ -1,6 +1,3 @@
-// todo(screen/state): Add a pub struct holding the text and an explicit "work in progress" flag (enum Idle/Working/Done or a separate field).
-// todo(screen/state): Make the fields pub, because App::update changes them directly.
-// todo(screen/state): Never infer the work state by comparing the text with "Working...".
 // todo(app/new): Store the screen state in App; new builds it with the text "Nothing happened yet" and no work in progress.
 
 // todo(screen/message): Add a pub enum Message with variants Clicked, Finished(String) and Reset.
