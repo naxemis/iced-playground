@@ -4,7 +4,7 @@ use iced::widget::{button, column, text};
 #[derive(Clone, Debug)]
 pub enum Message {
     Clicked,
-    Finished(String),
+    Finished,
     Reset,
 }
 
