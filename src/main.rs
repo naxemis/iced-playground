@@ -1,5 +1,3 @@
-// todo(app/view): Return the screen view as Element<screen::Message> without mapping.
-
 // todo(app/update): Reset restores the initial state.
 // todo(app/update): Clicked sets the text to "Working..." and raises the work flag (initially without a Task).
 // todo(app/update): Finished sets the result text and clears the work flag.

@@ -5,20 +5,20 @@ use iced::Element;
 pub enum Message {}
 
 pub struct App {
-    _screen: Screen,
+    screen: Screen,
 }
 
 impl App {
     pub fn new() -> Self {
         Self {
-            _screen: Screen::new(),
+            screen: Screen::new(),
         }
     }
 
     pub fn update(&mut self, _message: screen::Message) {}
 
     pub fn view(&self) -> Element<'_, screen::Message> {
-        iced::widget::text("placeholder").into()
+        self.screen.view()
     }
 }
 
