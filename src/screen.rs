@@ -38,7 +38,7 @@ impl Screen {
         column![text(&self.current_text), buttons,].into()
     }
 
-    pub async fn _wait() {
+    pub async fn wait() {
         tokio::time::sleep(Duration::from_secs(3)).await;
     }
 }
