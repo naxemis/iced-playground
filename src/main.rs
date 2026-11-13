@@ -1,4 +1,3 @@
-// todo(app): Add a pub struct App without fields for now, with pub methods new, update and view.
 // todo(app): New returns App; update and view are placeholders using a temporary message type (for example the unit type).
 // todo(main): Return iced::Result from main and call iced::application(App::new, App::update, App::view).run().
 // todo(main): Check with cargo run that an empty window opens (every next todo is checked the same way).
@@ -26,8 +25,8 @@
 // todo(app/update): Clicked returns Task::perform with the future and a mapper to Message::Finished.
 // todo(app/update): All other branches return Task::none(); the signature changes from () to Task<Message>.
 
-pub mod screen;
 pub mod app;
+pub mod screen;
 
 fn main() {
     println!("Hello, world!");
