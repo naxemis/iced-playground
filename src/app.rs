@@ -1,5 +1,6 @@
 use crate::screen::Screen;
 use iced::Element;
+use crate::screen;
 
 pub enum Message {}
 
@@ -14,9 +15,9 @@ impl App {
         }
     }
 
-    pub fn update(&mut self, _message: Message) {}
+    pub fn update(&mut self, _message: screen::Message) {}
 
-    pub fn view(&self) -> Element<'_, Message> {
+    pub fn view(&self) -> Element<'_, screen::Message> {
         iced::widget::text("placeholder").into()
     }
 }
